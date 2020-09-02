@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabelas</title>
+	<style type="text/css">
+		thead tr th {color:blue;background: yellow;}
+		tbody tr {color:red;}
+		tfoot tr {text-align: center;font-style: italic;background: aqua}
+	</style>
+</head>
+<body>
+
+	<table border="1" cellspacing="0" cellpadding="5" align="center" width="50%">
+		<thead>
+			<tr>
+				<th>Atores</th>
+				<th>Médicos</th>
+				<th>Advogados</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>10</td>
+				<td>5</td>
+				<td>8</td>
+			</tr>	
+			<tr>
+				<td>2</td>
+				<td>3</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>9</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>7</td>
+				<td>3</td>
+			</tr>	
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>FAMOSOS</td>
+				<td>RICOS</td>
+				<td>ESPERTOS</td>
+			</tr>
+		</tfoot>
+	</table>
+
+	<script type="text/javascript">
+		
+		var body = document.getElementsByTagName('tbody');
+		var linhas = body[0].getElementsByTagName('tr');
+		
+		var somas = [0,0,0];
+		console.log(somas);
+
+		for(var item = 0; item < linhas.length; item++) {
+			var valores = linhas[item].getElementsByTagName("td");
+			for(var i = 0; i < valores.length; i++) {
+				var n = +valores[i].innerText;
+				somas[i]+=n;
+			}
+		}
+
+		var foots = document.getElementsByTagName('tfoot')[0].getElementsByTagName('tr')[0].getElementsByTagName('td');
+		for(var i = 0; i < foots.length; i++) {
+			tds = foots[i].innerText = somas[i];
+			
+		}
+
+	</script>
+
+</body>
+</html>
