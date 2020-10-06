@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulários - Introdução</title>
+</head>
+<body>
+
+
+	<form action="http://localhost/ifma/processa.php" method="">
+
+		Texto: <input type="text"
+					name="texto"				
+					placeholder="Digite um texto" 
+					value="Meu texto"
+					size="50"					
+					required 
+					readonly 
+					disabled 
+		 /> <br /><br />
+		E-mail: <input required name="email" type="email" size="50" maxlength="10"  placeholder="Preencha nome@servidor" /> <br /><br />
+
+		<input name="disciplina[]" type="checkbox" checked disabled value="Matemática"> Matemática <br /><br />
+		<input value="Português" type="checkbox" name="disciplina[]"> Português <br /><br />
+		<input type="checkbox" name="disciplina[]" checked value="Biologia"> Biologia <br /><br />
+
+		<input type="radio" name="fruta" value="melão"> Melão 
+		<input type="radio" name="fruta" value="goiaba" > Goiaba 
+		<input type="radio" name="fruta" value="maracuja" checked disabled> Maracujá 
+
+		<br /><br />		
+		Senha: <input required name="senha" type="password" /> <br /><br />
+		Busca 1: <input name="busca" type="search" /> <br /><br />
+		Busca 2: <input name="busca" type="search" /> <br /><br />
+		Telefone: <input name="fone" type="tel" /> <br /><br />
+		Url: <input name="url" type="url" /> <br /><br />
+
+		<button>Enviar</button>
+		<input type="reset" value="Limpar campos">
+		
+	</form>
+
+</body>
+</html>
